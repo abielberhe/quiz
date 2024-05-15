@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>ሕቶታት</h2>
+    <div id="question1" class="question">
+      <p>1: ክሳድ ዘለዎ ርእሲ ዘይብሉ እንታይ እዩ?</p>
+      <input type="radio" name="q1" value="ተመን"> ተመን<br>
+      <input type="radio" name="q1" value="ጥርሙዝ">ጥርሙዝ <br>
+      <input type="radio" name="q1" value="ጊታር"> ጊታር<br>
+    </div>
+    <div id="question2" class="question" style="display: none;">
+      <p>2:ትማሊ ጽባሕ እንተዝከውን ሎሚ ዓርቢ  ምኮነ ፡ ኣብ መኣስ ኮይነ ይዛረብ ኣለኩ?</p>
+      <input type="radio" name="q2" value="ቀዳም"> ቀዳም<br>
+      <input type="radio" name="q2" value="ሓሙስ "> ሓሙስ <br>
+      <input type="radio" name="q2" value="ሰንበት"> ሰንበት<br>
+    </div>
+    <div id="question3" class="question" style="display: none;">
+      <p>3:ይድይብ ግን ፈጺሙ ዘይወርድ?</p>
+      <input type="radio" name="q3" value="ፍቕሪ">ፍቅሪ<br>
+      <input type="radio" name="q3" value="ዕድመ">ዕድመ<br>
+      <input type="radio" name="q3" value="ሓጎስ">ሓጎስ<br>
+    </div>
+    <div id="question4" class="question" style="display: none;">
+      <p>4፡ሓደ ሰብ ከመይ ጌሩ 25 መዓልቲ ብዘይ ድቃስ ይጸንሕ ?</p>
+      <input type="radio" name="q4" value="ሓጺር">ቀም የብል<br>
+      <input type="radio" name="q4" value="ለይቲ">ለይቲ ለይቲ ይድቅስ<br>
+      <input type="radio" name="q4" value="ሕጽቦ">ገጹ ማይ እናተሓጽበ<br>
+    </div>
+    <div id="question5" class="question" style="display: none;">
+      <p>5፡ዝጎዪ ግን እግሪ ዘይብሉ፡ ዓራት ዘለዎ ግን ዘይድቅስ እንታይ እዩ?</p>
+      <input type="radio" name="q5" value="ወሓዚ">ወሓዚ<br>
+      <input type="radio" name="q5" value="ኮምፒተር">ኮምፒተር<br>
+      <input type="radio" name="q5" value="መኪና">መኪና<br>
+    </div>
+    <div id="question6" class="question" style="display: none;">
+      <p>6፡መሕጸቢት ማሽን ዝማሃዘ መን ይበሃል?</p>
+      <input type="radio" name="q6" value="ጀምስ">ጀምስ ኪንግ<br>
+      <input type="radio" name="q6" value="ተስላ">ኒኮላስ ተስላ<br>
+      <input type="radio" name="q6" value="ኒውተን">ኒውተን<br>
+    </div>
+    <div id="question7" class="question" style="display: none;">
+      <p>7፡ካሜራ ዝማሃዘ መን ይበሃል?</p>
+      <input type="radio" name="q7" value="ኦባማ">ባራክ ኦባማ<br>
+      <input type="radio" name="q7" value="ማርክስ">ካርል ማርክስ<br>
+      <input type="radio" name="q7" value="ዮሴፍ">ዮሴፍ ኒሴፎር<br>
+    </div>
+    <div id="question8" class="question" style="display: none;">
+      <p>8፡ካብዘን ኣብ ዝስዕባ ሃገራት ትሕተ ሳህራ ዘይኮነት?</p>
+      <input type="radio" name="q8" value="ኤርትራ">ኤርትራ<br>
+      <input type="radio" name="q8" value="ግብጺ">ግብጺ<br>
+      <input type="radio" name="q8" value="ኣንጎላ">ኣንጎላ<br>
+    </div>
+    <div id="question9" class="question" style="display: none;">
+      <p>9፡እታ ናይ መጀመርያ ኮምፒተር ክንደይ ኪሎ ትመዘን ኔራ?</p>
+      <input type="radio" name="q9" value="ኪሎ">24,500 ኪሎ ግራም<br>
+      <input type="radio" name="q9" value="ቶን">10 ቶን<br>
+      <input type="radio" name="q9" value="ኩሉ">መልሲ የለን<br>
+    </div>
+    <div id="question10" class="question" style="display: none;">
+      <p>10፡ኩዑሶ እግሪ ኣበይ ተጀሚሩ?</p>
+      <input type="radio" name="q10" value="ቻይና">ቻይና<br>
+      <input type="radio" name="q10" value="ዓዲ">ዓዲ እንግሊዝ<br>
+      <input type="radio" name="q10" value="ብራዚል">ብራዚል<br>
+    </div>
+    <button id="nextBtn" onclick="nextQuestion()">ቀጽል</button>
+    <div id="result" style="display: none;"></div>
+    <button id="retryBtn" onclick="retryQuiz()" style="display: none;">እንደገና ፈትን</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
